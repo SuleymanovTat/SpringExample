@@ -1,4 +1,4 @@
-package ru.suleymanovtat;
+package ru.suleymanovtat.model;
 
 public class TestBean {
 

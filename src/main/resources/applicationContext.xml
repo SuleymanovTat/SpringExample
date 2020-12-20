@@ -8,13 +8,17 @@
         http://www.springframework.org/schema/context/spring-context.xsd">
 
     <bean id="testBean"
-          class="ru.suleymanovtat.TestBean">
+          class="ru.suleymanovtat.model.TestBean">
         <constructor-arg value="Suleymanov"/>
     </bean>
 
     <bean id="otherBean"
-          class="ru.suleymanovtat.OtherBean">
+          class="ru.suleymanovtat.model.OtherBean">
         <constructor-arg value="testBean"/>
+    </bean>
+
+    <bean id="music"
+          class="ru.suleymanovtat.model.ContemporaryMusic">
     </bean>
 
 </beans>
