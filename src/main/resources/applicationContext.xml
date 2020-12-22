@@ -21,6 +21,9 @@
     <bean id="music"
           class="ru.suleymanovtat.model.ContemporaryMusic">
     </bean>
+    <bean id="classicMusic"
+          class="ru.suleymanovtat.model.ContemporaryMusic">
+    </bean>
     <!--    <bean id="player"-->
     <!--          class="ru.suleymanovtat.Player">-->
     <!--&lt;!&ndash;        param object&ndash;&gt;-->
@@ -37,6 +40,13 @@
         <property name="music" ref="music"/>
         <property name="id" value="${musicPlayer.id}"/>
         <property name="name" value="${musicPlayer.name}"/>
+        <!--        setMucisList-->
+        <property name="musicList">
+            <list value-type="ru.suleymanovtat.Music">
+                <ref bean="music"/>
+                <ref bean="classicMusic"/>
+                <ref bean="music"/>
+            </list>
+        </property>
     </bean>
-
 </beans>

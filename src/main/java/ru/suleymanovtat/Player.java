@@ -1,10 +1,13 @@
 package ru.suleymanovtat;
 
+import java.util.List;
+
 public class Player {
 
     private Music music;
     private int id;
     private String name;
+    private List<Music> musicList;
 
     public Player() {
     }
@@ -33,7 +36,20 @@ public class Player {
         this.name = name;
     }
 
+    public List<Music> getMusicList() {
+        return musicList;
+    }
+
+    public void setMusicList(List<Music> musicList) {
+        this.musicList = musicList;
+    }
+
     public void playMusic() {
         System.out.println("Play " + music.getSong());
+    }
+
+    @Override
+    public String toString() {
+        return musicList.getClass().getName();
     }
 }

@@ -22,6 +22,8 @@ public class Main {
         playerOther.playMusic();
         System.out.println(playerOther.getId());
         System.out.println(playerOther.getName());
+        System.out.println("\t");
+        System.out.println("List: " + playerOther.getMusicList());
         context.close();
     }
 }
