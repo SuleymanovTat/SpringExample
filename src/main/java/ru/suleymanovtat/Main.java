@@ -15,6 +15,13 @@ public class Main {
 //        Player player = new Player(music);
         Player player = context.getBean("player", Player.class);
         player.playMusic();
+        System.out.println(player.getId());
+        System.out.println(player.getName());
+        System.out.println("\t");
+        Player playerOther = context.getBean("playerOther", Player.class);
+        playerOther.playMusic();
+        System.out.println(playerOther.getId());
+        System.out.println(playerOther.getName());
         context.close();
     }
 }
