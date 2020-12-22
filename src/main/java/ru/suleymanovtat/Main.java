@@ -11,8 +11,9 @@ public class Main {
         testBean.setAge(44);
         System.out.println(testBean.getAge());
 
-        Music music = context.getBean("music", Music.class);
-        Player player = new Player(music);
+//        Music music = context.getBean("music", Music.class);
+//        Player player = new Player(music);
+        Player player = context.getBean("player", Player.class);
         player.playMusic();
         context.close();
     }
