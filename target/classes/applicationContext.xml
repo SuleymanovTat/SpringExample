@@ -20,5 +20,9 @@
     <bean id="music"
           class="ru.suleymanovtat.model.ContemporaryMusic">
     </bean>
+    <bean id="player"
+          class="ru.suleymanovtat.Player">
+        <constructor-arg ref="music"/>
+    </bean>
 
 </beans>
