@@ -2,6 +2,7 @@ package ru.suleymanovtat;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import ru.suleymanovtat.model.TestBean;
+import ru.suleymanovtat.model.UserBean;
 
 public class Main {
     public static void main(String[] args) {
@@ -24,6 +25,10 @@ public class Main {
         System.out.println(playerOther.getName());
         System.out.println("\t");
         System.out.println("List: " + playerOther.getMusicList());
+        UserBean user = context.getBean("user", UserBean.class);
+        UserBean userOther = context.getBean("user", UserBean.class);
+        System.out.println("user      :" + user + " " + user.hashCode());
+        System.out.println("userOther :" + user + " " + userOther.hashCode());
         context.close();
     }
 }

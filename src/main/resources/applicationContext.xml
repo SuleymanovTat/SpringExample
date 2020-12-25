@@ -49,4 +49,10 @@
             </list>
         </property>
     </bean>
+
+    <bean id="user"
+          class="ru.suleymanovtat.model.UserBean"
+          scope="prototype">
+        <constructor-arg value="Ilmir"/>
+    </bean>
 </beans>
